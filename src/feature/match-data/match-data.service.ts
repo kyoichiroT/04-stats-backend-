@@ -1,11 +1,14 @@
 import { Injectable } from '@nestjs/common';
-import { WinRate } from './win-rate.dto';
+import { WinRatio } from './win-ratio.dto';
+import { MatchDataRepository } from './match-data.repository';
 
 @Injectable()
 export class MatchDataService {
-    private readonly items = [];
+  constructor(private readonly matchDataRepository: MatchDataRepository) {}
 
-    async getWinRates(): Promise<WinRate[]> {
-        return [];
-    }
+  async getWinRatios(): Promise<WinRatio[]> {
+    const winRatioData = await this.matchDataRepository.getWinRatiosfromS3();
+
+    return winRatioData;
+  }
 }

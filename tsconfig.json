@@ -12,20 +12,29 @@
     "baseUrl": "./src",
     "incremental": true,
     "skipLibCheck": true,
-    "strictNullChecks": false,
+    "strictNullChecks": true,
     "noImplicitAny": false,
-    "strictBindCallApply": false,
+    "strictBindCallApply": true,
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
     "paths": {
-      "*": [
-        "*"
-      ]
-    },
+      "*": ["*"]
+    }
   },
   "editor.codeActionsOnSave": {
     "source.organizeImports": true
   },
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
+  "prettier.printWidth": 80,
+  "prettier.tabWidth": 2,
+  "prettier.semi": true
 }
